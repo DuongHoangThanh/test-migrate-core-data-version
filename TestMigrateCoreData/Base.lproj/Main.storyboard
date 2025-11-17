@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TestMigrateCoreData" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="buu-3g-lq5">
+                                <rect key="frame" x="0.0" y="118" width="393" height="561"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cF-pu-CpZ">
+                                <rect key="frame" x="318" y="729" width="59" height="39"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="ADD"/>
+                                <connections>
+                                    <action selector="addClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XHE-UR-js7"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter new note " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NN2-Sq-ZPa">
+                                <rect key="frame" x="16" y="708" width="286" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RoH-5X-5NT" userLabel="Address TF">
+                                <rect key="frame" x="16" y="750" width="286" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RoH-5X-5NT" firstAttribute="leading" secondItem="NN2-Sq-ZPa" secondAttribute="leading" id="0vN-qx-f9f"/>
+                            <constraint firstItem="6cF-pu-CpZ" firstAttribute="top" secondItem="buu-3g-lq5" secondAttribute="bottom" constant="50" id="2WI-6B-5sR"/>
+                            <constraint firstItem="buu-3g-lq5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4Nj-9J-kTg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6cF-pu-CpZ" secondAttribute="bottom" constant="16" id="Nl3-ik-VZC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6cF-pu-CpZ" secondAttribute="trailing" constant="16" id="Qfv-3b-cNC"/>
+                            <constraint firstItem="RoH-5X-5NT" firstAttribute="trailing" secondItem="NN2-Sq-ZPa" secondAttribute="trailing" id="Sr9-Qa-r3s"/>
+                            <constraint firstItem="NN2-Sq-ZPa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="eNN-Qp-4kK"/>
+                            <constraint firstItem="6cF-pu-CpZ" firstAttribute="leading" secondItem="NN2-Sq-ZPa" secondAttribute="trailing" constant="16" id="kyk-qp-Ad0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="buu-3g-lq5" secondAttribute="trailing" id="lrx-f5-Upr"/>
+                            <constraint firstItem="RoH-5X-5NT" firstAttribute="top" secondItem="NN2-Sq-ZPa" secondAttribute="bottom" constant="8" symbolic="YES" id="qSl-6e-Qfk"/>
+                            <constraint firstItem="buu-3g-lq5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rqZ-Zk-26r"/>
+                            <constraint firstItem="RoH-5X-5NT" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="v9w-4A-lBp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="adressTF" destination="RoH-5X-5NT" id="oqB-sB-38Q"/>
+                        <outlet property="button" destination="6cF-pu-CpZ" id="7d5-jK-da5"/>
+                        <outlet property="tableView" destination="buu-3g-lq5" id="SGh-XV-Z1m"/>
+                        <outlet property="textField" destination="NN2-Sq-ZPa" id="EaM-tM-rYK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-34.507042253521128"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
